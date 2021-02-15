@@ -1,16 +1,18 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
-import Feature from './Home';
-import Contact from './Feature';
-import About from './Contact'
-import Home from './About'
+import Feature from './Feature';
+import Contact from './Contact';
+import About from './About'
+import Home from './Home'
+
+import './app.css';
 
 const App = () => {
   return(
-    <>
+    <nav className="nav">
      <Router>
-        <ul>
+        <ul className="nav-links">
           <li>
             <Link to='/'>Home</Link>
           </li>
@@ -34,12 +36,12 @@ const App = () => {
           <Route path='/contact'>
             <Contact />
           </Route>
-          <Route path='/home'>
+          <Route path='/'>
             <Home />
           </Route>
         </Switch>
       </Router>
-    </>
+    </nav>
   );
 }
 
